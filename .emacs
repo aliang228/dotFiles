@@ -20,58 +20,36 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Courier New" :foundry "outline" :slant normal :weight normal :height 98 :width normal)))))
+ '(default ((t (:family "Source Code Pro Medium" :foundry "outline" :slant normal :weight normal :height 98 :width normal)))))
  ;;设置初始目录  
  ;;(setq default-directory "f:\\")
 (setq inhibit-startup-message t)
  ;;启动0.5秒后自动最大化 （windows下）  
-(run-with-idle-timer 0.3 nil 'w32-send-sys-command 61488) 
+;;(run-with-idle-timer 0.3 nil 'w32-send-sys-command 61488) 
  ;;显示行号  
  (global-linum-mode 1) 
 (require 'php-mode)  
-(add-hook 'php-mode-user-hook 'turn-on-font-lock)
+;;(add-hook 'php-mode-user-hook 'turn-on-font-lock)
 ;;不备份
 (setq make-backup-files nil)
 ;;hack news 
-(require 'hackernews)
+;;(require 'hackernews)
 ;;web mode 
-(require 'web-mode)
-(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
-(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
+;;(require 'web-mode)
+;;(add-to-list 'auto-mode-alist '("\\.phtml\\'" . web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.tpl\\.php\\'" . web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.jsp\\'" . web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.as[cp]x\\'" . web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.erb\\'" . web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.mustache\\'" . web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.djhtml\\'" . web-mode))
+;;(add-to-list 'auto-mode-alist '("\\.html\\'" . web-mode))
 ;;代码折叠
-(load-library "hideshow")
-(add-hook 'c-mode-hook 'hs-minor-mode)
-(add-hook 'c++-mode-hook 'hs-minor-mode)
-(add-hook 'java-mode-hook 'hs-minor-mode)
-(add-hook 'perl-mode-hook 'hs-minor-mode)
-(add-hook 'cperl-mode-hook 'hs-minor-mode)
-(add-hook 'php-mode-hook 'hs-minor-mode)
-(add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
-;;for svn;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
-(defun svn-update()  
-  "Svn update"  
-  (interactive)  
-  (let ((cmd (concat "TortoiseProc.exe /command:update /path:\"" buffer-file-name "\" /closeonend:0")))  
-    (message cmd)  
-  (shell-command cmd)))  
-  
-(defun svn-commit()  
-  "Svn commit"  
-  (interactive)  
-  (let ((cmd (concat "TortoiseProc.exe /command:commit /path:\"" buffer-file-name "\" /closeonend:0")))  
-    (message cmd)  
-  (shell-command cmd)))  
-  
-;;SVN diff  
-(defun svn-diff()  
-  "Svn diff"  
-  (interactive)  
-  (let ((cmd (concat "TortoiseProc.exe /command:diff /path:\"" buffer-file-name "\" /closeonend:0")))  
-    (message cmd)  
-  (shell-command cmd)))
+;;(load-library "hideshow")
+;;(add-hook 'c-mode-hook 'hs-minor-mode)
+;;(add-hook 'c++-mode-hook 'hs-minor-mode)
+;;(add-hook 'java-mode-hook 'hs-minor-mode)
+;;(add-hook 'perl-mode-hook 'hs-minor-mode)
+;;(add-hook 'cperl-mode-hook 'hs-minor-mode)
+;;(add-hook 'php-mode-hook 'hs-minor-mode)
+;;(add-hook 'emacs-lisp-mode-hook 'hs-minor-mode)
