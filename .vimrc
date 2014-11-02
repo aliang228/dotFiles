@@ -1,5 +1,5 @@
-set sw=2
-set ts=2
+set sw=4
+set ts=4
 
 " Source the vimrc file after saving it
 if has("autocmd")
@@ -21,10 +21,9 @@ au BufRead,BufNewFile *  setfiletype txt
 set backspace=2
 " 允许backspace和光标键跨越行边界
 set whichwrap+=<,>,h,l
-"在输入命令时列出匹配项目，也就是截图底部的效果
 set wildmenu
 set nocindent
-"打开自动缩,继承前一行的缩进方式，特别适用于多行注释 进
+"打开自动缩,继承前一行的缩进方式，特别适用于多行注释
 set autoindent
 "默认情况下手动折叠
 set foldmethod=manual
@@ -66,7 +65,15 @@ set number
 set textwidth=70
 set hlsearch
 " tab宽度
+set expandtab
 set tabstop=4
+set smarttab
+autocmd FileType ruby,haml,javascript,html,css,xml set ai
+autocmd FileType ruby,haml,javascript,html,css,xml set sw=2
+autocmd FileType ruby,haml,javascript,html,css,xml set ts=2
+autocmd FileType ruby,haml,javascript,html,css,xml set sts=2
+" Display extra whitespace
+set list listchars=tab:»·,trail:·
 "set cindent shiftwidth=4
 "set autoindent shiftwidth=4
 filetype plugin indent on
