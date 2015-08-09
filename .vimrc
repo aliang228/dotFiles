@@ -1,3 +1,4 @@
+call pathogen#infect()
 set sw=4
 set ts=4
 
@@ -67,7 +68,41 @@ set list listchars=tab:»·,trail:·
 "set cindent shiftwidth=4
 "set autoindent shiftwidth=4
 filetype plugin indent on
+filetype plugin on
 "把 F8 映射到 启动NERDTree插件
-map <C-n> :NERDTree<CR>
-colorscheme desert
-set pastetoggle :<C-p>
+map <F8> :NERDTree<CR>
+nmap <F10> :TagbarToggle<CR>
+colorscheme molokai
+set pastetoggle :<F9>
+let g:go_disable_autoinstall = 0
+let g:acp_enableAtStartup = 0
+let g:neocomplete#enable_at_startup = 1
+
+"for gotags
+let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \ ],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \ },
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \ },
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+\ }
