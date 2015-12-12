@@ -72,7 +72,7 @@ filetype plugin on
 "把 F8 映射到 启动NERDTree插件
 map <F8> :NERDTree<CR>
 nmap <F10> :TagbarToggle<CR>
-colorscheme molokai
+colorscheme blackboard
 set pastetoggle :<F9>
 let g:go_disable_autoinstall = 0
 let g:acp_enableAtStartup = 0
