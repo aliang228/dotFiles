@@ -1,5 +1,0 @@
-let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =3
-let g:netrw_dirhist_1='/Users/chenxueping/.rvm/gems/ruby-2.3.0/gems/bundler-1.12.5'
-let g:netrw_dirhist_2='/Users/chenxueping/.rvm/gems/ruby-2.0.0-p643/gems/which_day-0.1.0'
-let g:netrw_dirhist_3='/Users/chenxueping/.rvm/gems/ruby-2.0.0-p643/gems/which_day-0.1.1'
